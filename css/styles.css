@@ -1,0 +1,919 @@
+/*========Сброс настроек=========*/
+/*========Сброс настроек=========*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+body {
+  background: #fff;
+  font-family: "oswald_regular", sans-serif;
+}
+/*========Базовые настройки=========*/
+h1 {
+  font-size: 4rem;
+  letter-spacing: 35px;
+  text-transform: uppercase;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none!important;
+}
+/*==============================HEADER========================*/
+header {
+  position: fixed;
+  width: 175px;
+  top: 30px;
+  left: 5%;
+  z-index: 100;
+}
+header .logo_case {
+  width: 100%;
+}
+header .logo_case .logo {
+  width: 100%;
+  background: #1b1b1b;
+  border-bottom: 1px solid #fff;
+}
+header .logo_case .logo img {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+header .logo_case .menu {
+  position: relative;
+  width: 50%;
+  height: 50px;
+  background: #ca0a60;
+  transition: all .3s;
+}
+header .logo_case .menu:hover {
+  background: #fff;
+}
+header .logo_case .menu:hover .menu_sprite {
+  transform: translatey(23px);
+}
+header .logo_case .menu .sprite_row {
+  position: relative;
+  height: 24px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+header .logo_case .menu .sprite_row .menu_sprite {
+  position: absolute;
+  width: 30px;
+  bottom: 0;
+  left: 28px;
+  transition: transform 0.3s cubic-bezier(0.2, -1, 0.8, 2);
+}
+header .logo_case .menu .sprite_row .menu_sprite .sprite_up {
+  color: #ca0a60;
+}
+header .logo_case .menu_left {
+  float: left;
+  border-right: 1px solid #fff;
+  text-align: center;
+  line-height: 0;
+  font-size: 2.3rem;
+  color: #fff;
+}
+header .logo_case .menu_left:hover .submenu_left {
+  width: 202%;
+  overflow: visible;
+}
+header .logo_case .menu_left:hover .submenu_left ul li {
+  height: 130px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition: transform .2s;
+}
+header .logo_case .menu_left:hover .submenu_left ul .submenu_luxembourg {
+  transition-property: opacity, transform;
+  opacity: 1;
+  transition-delay: .2s;
+}
+header .logo_case .menu_left:hover .submenu_left ul .submenu_belgique {
+  transition-property: opacity, transform;
+  opacity: 1;
+  transition-delay: .4s;
+}
+header .logo_case .menu_right {
+  float: right;
+  text-align: center;
+}
+header .logo_case .menu_right:hover .submenu_right {
+  width: 202%;
+  overflow: visible;
+}
+header .logo_case .menu_right:hover .submenu_right ul li {
+  height: 100px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition: transform .2s;
+}
+header .logo_case .menu_right:hover .submenu_right ul .submenu_tweetter {
+  transition-property: opacity, transform;
+  opacity: 1;
+  transition-delay: .2s;
+}
+header .logo_case .menu_right:hover .submenu_right ul .submenu_linkedin {
+  transition-property: opacity, transform;
+  opacity: 1;
+  transition-delay: .4s;
+}
+header .logo_case .menu_right:hover .submenu_right ul .submenu_google {
+  transition-property: opacity, transform;
+  opacity: 1;
+  transition-delay: .6s;
+}
+header .submenu_left {
+  left: 0;
+}
+header .submenu_left .submenu_france {
+  transform: rotatex(57deg);
+}
+header .submenu_left .submenu_france a {
+  background: #704663;
+}
+header .submenu_left .submenu_luxembourg {
+  opacity: 0;
+  transform: rotatex(78deg);
+}
+header .submenu_left .submenu_luxembourg a {
+  background: #a98e62;
+}
+header .submenu_left .submenu_belgique {
+  opacity: 0;
+  transform: rotatex(102deg);
+}
+header .submenu_left .submenu_belgique a {
+  background: #3f8093;
+}
+header .submenu_right {
+  right: 0;
+}
+header .submenu_right i {
+  font-size: 3rem;
+}
+header .submenu_right .submenu_facebook {
+  line-height: 50px;
+  transform: rotatex(57deg);
+}
+header .submenu_right .submenu_tweetter {
+  line-height: 50px;
+  opacity: 0;
+  transform: rotatex(78deg);
+}
+header .submenu_right .submenu_linkedin {
+  opacity: 0;
+  transform: rotatex(102deg);
+}
+header .submenu_right .submenu_google {
+  opacity: 0;
+  transform: rotatex(132deg);
+}
+header .submenu {
+  position: absolute;
+  width: 0;
+  top: 50px;
+  overflow: hidden;
+}
+header .submenu ul {
+  line-height: initial;
+  perspective: 300px;
+  transition: all 2s;
+}
+header .submenu ul li {
+  position: relative;
+  height: 0;
+  transform-origin: center top;
+  border-top: 1px solid #fff;
+  transition: all .5s;
+}
+header .submenu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #ca0a60;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s cubic-bezier(0.2, -1, 0.8, 2);
+}
+header .submenu ul li a img {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+header .submenu ul li a p {
+  margin: 0;
+}
+header .submenu ul li a:hover {
+  transform: translatex(25px);
+  border: 2px solid #fff;
+}
+header .submenu ul li a:hover img {
+  transform: rotatey(360deg);
+  transition: transform 0.5s cubic-bezier(0.2, -1, 0.5, 2);
+}
+header .submenu ul li a:hover i {
+  transform: rotatey(360deg);
+  transition: transform 0.5s cubic-bezier(0.2, -1, 0.5, 2);
+}
+/*==============================AWWWARDS========================*/
+.awwwards {
+  position: fixed;
+  overflow: hidden;
+  width: 120px;
+  z-index: 100;
+  top: -22px;
+  right: 15px;
+}
+.awwwards a {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+.awwwards a img {
+  width: 100%;
+  height: auto;
+}
+/*==============================FRANCE========================*/
+.france {
+  overflow: hidden;
+}
+/*============PARIS================*/
+.paris {
+  min-height: 1000px;
+  position: relative;
+  background: url('../images/jpg/france-main-picture.jpg');
+  background-position: 50% 0;
+}
+.paris .wellcome {
+  text-align: center;
+  padding-top: 150px;
+}
+.paris .wellcome h1 {
+  color: #704663;
+  margin-bottom: 20px;
+}
+.paris .wellcome p {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #5a5a5e;
+}
+.paris .france_siluet {
+  position: relative;
+  width: 552px;
+  min-height: 300px;
+  margin: 0 auto;
+  margin-top: 449px;
+  bottom: 0;
+  perspective: 300px;
+}
+.paris .france_siluet:hover img {
+  transform: rotatex(0deg);
+}
+.paris .france_siluet:hover .tourEiffel,
+.paris .france_siluet:hover .reverbere_small1,
+.paris .france_siluet:hover .reverbere_small2,
+.paris .france_siluet:hover .reverbere_big1,
+.paris .france_siluet:hover .reverbere_big2,
+.paris .france_siluet:hover .nuage1,
+.paris .france_siluet:hover .nuage2,
+.paris .france_siluet:hover .nuage3 {
+  transition-property: transform, opacity;
+  opacity: 1;
+}
+.paris .france_siluet .tourEiffel {
+  transition-delay: .1s;
+}
+.paris .france_siluet .reverbere_small1 {
+  transition-delay: .2s;
+}
+.paris .france_siluet .reverbere_small2 {
+  transition-delay: .3s;
+}
+.paris .france_siluet .reverbere_big1 {
+  transition-delay: .4s;
+}
+.paris .france_siluet .reverbere_big2 {
+  transition-delay: .5s;
+}
+.paris .france_siluet .nuage1 {
+  transition-delay: .6s;
+}
+.paris .france_siluet .nuage2 {
+  transition-delay: .7s;
+}
+.paris .france_siluet .nuage3 {
+  transition-delay: .8s;
+}
+.paris .france_siluet img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transform-origin: center bottom;
+  transform: rotatex(-63deg);
+  transition: transform .3s linear;
+}
+.paris .france_siluet .tourEiffel,
+.paris .france_siluet .reverbere_small1,
+.paris .france_siluet .reverbere_small2,
+.paris .france_siluet .reverbere_big1,
+.paris .france_siluet .reverbere_big2,
+.paris .france_siluet .nuage1,
+.paris .france_siluet .nuage2,
+.paris .france_siluet .nuage3 {
+  opacity: 0;
+}
+.paris .france_siluet .ville {
+  left: 0;
+}
+.paris .france_siluet .tourEiffel {
+  left: 231px;
+}
+.paris .france_siluet .reverbere_small1 {
+  left: 378px;
+}
+.paris .france_siluet .reverbere_small2 {
+  left: 152px;
+}
+.paris .france_siluet .reverbere_big1 {
+  left: 438px;
+}
+.paris .france_siluet .reverbere_big2 {
+  left: 82px;
+}
+.paris .france_siluet .nuage1 {
+  top: 0;
+  left: 330px;
+}
+.paris .france_siluet .nuage2 {
+  top: 40px;
+  left: 130px;
+}
+.paris .france_siluet .nuage3 {
+  top: 120px;
+  left: 310px;
+}
+/*============STATISTIC================*/
+.statistic {
+  min-height: 600px;
+  position: relative;
+  background: #dcdbdc;
+}
+.statistic .train {
+  position: absolute;
+  left: -1600px;
+  bottom: 0;
+}
+.statistic .propos {
+  border: 1px solid #ccc;
+  color: #704663;
+  background: #dcdbdc;
+}
+.statistic .propos .propos_in {
+  border: 1px solid #704663;
+  color: #ccc;
+  background: #704663;
+}
+.cube {
+  width: 200px;
+  text-align: center;
+  margin: 40px auto ;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  perspective: 400px;
+}
+.cube .cube_wrap {
+  position: relative;
+  padding-top: 10px;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotatex(0deg);
+}
+.cube .cube_wrap .cube_in {
+  position: absolute;
+  width: 100%;
+  bottom: -29px;
+  left: 0;
+  padding-top: 10px;
+  transform: rotatex(-90deg) translatey(29px);
+}
+#carousel {
+  width: 792px;
+  margin: 80px auto;
+}
+#carousel .carousel-indicators {
+  margin-bottom: -40px;
+}
+#carousel .carousel-inner .item {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+#carousel .carousel-inner .item .inside {
+  padding: 0 90px;
+}
+#carousel .carousel-inner .item .inside h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: #704663;
+}
+#carousel a {
+  top: 40%;
+  background: transparent;
+  width: 34px;
+  height: 63px;
+}
+#carousel a.left {
+  left: -5%;
+  background-image: url('../images/global/fleche-nav-about-left.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+#carousel a.right {
+  right: -5%;
+  background-image: url('../images/global/fleche-nav-about-right.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.massege {
+  position: absolute;
+  top: 0;
+  right: -170px;
+  padding: 10px 30px;
+  background: #7B7B7B;
+  color: #fff;
+  font-size: 2rem;
+  transform: scale(0);
+}
+.massege p {
+  position: relative;
+  margin: 0;
+}
+.massege p:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  background: #7B7B7B;
+  transform: rotate(45deg);
+}
+.massege.blink {
+  animation: blink .4s;
+  transform: scale(1);
+}
+.massege.overblink {
+  animation: overblink .4s;
+  transform: scale(0);
+}
+/*============ACTIVITY================*/
+.activity {
+  min-height: 500px;
+  position: relative;
+  background: #7B7B7B;
+  transition: background .5s;
+}
+.activity_front {
+  position: relative;
+  width: 100%;
+  padding: 100px 200px;
+  text-align: center;
+}
+.activity_front .activity_item {
+  display: inline-block;
+  position: relative;
+  min-width: 150px;
+  min-height: 150px;
+  margin-left: 10px;
+  margin: 2px 2px;
+  background: #d5d2d4;
+  overflow: hidden;
+}
+.activity_front .activity_item:hover::before {
+  top: 0;
+}
+.activity_front .activity_item:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -150px;
+  background: #ca0a60;
+  transition: top .3s;
+}
+.activity_front .activity_item .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../images/france/interests-spritesheets-icons.png') no-repeat;
+  z-index: 100;
+  background-position-y: 0;
+  transition: background-position-y 0.5s cubic-bezier(0.39, -0.46, 0.53, 1.47);
+}
+.activity_front .activity_item .item:hover {
+  background-position-y: -147px;
+}
+.activity_front .activity_item .item_1 {
+  background-position-x: 0;
+}
+.activity_front .activity_item .item_2 {
+  background-position-x: -140px;
+}
+.activity_front .activity_item .item_3 {
+  background-position-x: -285px;
+}
+.activity_front .activity_item .item_4 {
+  background-position-x: -430px;
+}
+.activity_front .activity_item .item_5 {
+  background-position-x: -575px;
+}
+.activity_front .activity_item .item_6 {
+  background-position-x: -720px;
+}
+.activity_front .activity_item .item_7 {
+  background-position-x: -865px;
+}
+.activity_front .activity_item .item_8 {
+  background-position-x: -1010px;
+}
+.activity_front .heart {
+  position: absolute;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  top: 45px;
+  left: 45.5%;
+  background: url('../images/france/Ilove-icon-heart-bg.png') no-repeat center center;
+}
+.activity_front .heart .heart_item {
+  display: inline-block;
+  animation: heartblink 0.7s infinite ease-in-out;
+}
+/*=========================LUXEMBURG=======================*/
+/*============LUXEMBURG-FOTO================*/
+.luxembourg_foto {
+  min-height: 800px;
+  position: relative;
+  background: url('../images/jpg/luxembourg-main-picture.jpg');
+  background-position: 50% 0;
+}
+.luxembourg_foto:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 0;
+  border-top: 80px solid #704663;
+  border-left: 750px solid transparent;
+  border-right: 750px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+.luxembourg_foto p {
+  text-align: center;
+  margin-top: 300px;
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+/*============WEBDESIGN================*/
+.webdesign {
+  min-height: 1200px;
+  position: relative;
+}
+.webdesign .meteir {
+  border: 1px solid #ccc;
+  color: #9f8764;
+  background: #dcdbdc;
+}
+.webdesign .meteir .meteir_in {
+  border: 1px solid #9f8764;
+  color: #ccc;
+  background: #9f8764;
+}
+.webdesign .web_text {
+  padding: 150px 120px 0 120px;
+  text-align: justify;
+  color: #303030;
+  font-size: 1.7rem;
+}
+.webdesign .plus_prof {
+  margin: 50px;
+  margin-top: 100px;
+  padding: 20px 50px;
+  background: #68695F;
+  text-align: center;
+  color: #E0DEDD;
+  font-size: 4rem;
+  box-sizing: border-box;
+  letter-spacing: 4px;
+}
+.webdesign .plus_prof p {
+  position: relative;
+  margin-left: 50px;
+}
+.webdesign .plus_prof p span {
+  display: block;
+  position: absolute;
+  top: -28px;
+  left: -5px;
+  font-size: 8rem;
+}
+.webdesign .works {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  color: #9f8764;
+  text-transform: uppercase;
+  text-align: center;
+}
+.webdesign .works:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 40%;
+  top: 40%;
+  background: #9f8764;
+}
+.webdesign .works:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 60%;
+  top: 40%;
+  background: #9f8764;
+}
+.webdesign .works span {
+  padding: 0 50px;
+}
+.webdesign .portfolio {
+  width: 90%;
+  margin: 100px auto;
+}
+.webdesign .portfolio .portfolio_slide {
+  position: relative;
+  height: 280px;
+  padding: 3px;
+  perspective: 900px;
+}
+.webdesign .portfolio .portfolio_slide:before {
+  content: "";
+  position: absolute;
+  width: 345px;
+  height: 20%;
+  left: 3px;
+  top: 0;
+  background: #9f8764;
+  transform: skewy(10deg);
+}
+.webdesign .portfolio .portfolio_slide .elem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.39, -0.46, 0.53, 1.47);
+}
+.webdesign .portfolio .portfolio_slide .elem:hover {
+  transform: rotatey(0) skewy(0);
+}
+.webdesign .portfolio .portfolio_slide .elem:hover .description {
+  bottom: 0;
+}
+.webdesign .portfolio .portfolio_slide .elem .description {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0;
+  bottom: -20%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  transition: .4s;
+  transition-delay: .3s;
+  z-index: 200;
+}
+.webdesign .portfolio .portfolio_slide .elem .description h1 {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.webdesign .portfolio .portfolio_slide .elem .elem_slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_active {
+  opacity: 0;
+  transition: opacity .5s;
+  z-index: 10;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_active img {
+  display: inline-block;
+  width: 20%;
+  margin-top: 25%;
+  transform: rotate(180deg) scale(0);
+  transition-property: transform;
+  transition: transform 0.3s cubic-bezier(0, 0, 0.8, 2);
+  transition-delay: .4s;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_active:hover {
+  opacity: 1;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_active:hover img {
+  transform: rotate(0deg) scale(1);
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_1 {
+  background: url('../images/jpg/arton25.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_1 {
+  background: url('../images/jpg/artoff25.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_2 {
+  background: url('../images/jpg/arton23.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_2 {
+  background: url('../images/jpg/corian-healthcare-1.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_3 {
+  background: url('../images/jpg/arton21.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_3 {
+  background: url('../images/jpg/artoff21.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_4 {
+  background: url('../images/jpg/arton24.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_4 {
+  background: url('../images/jpg/corian-color-tool-1.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_5 {
+  background: url('../images/jpg/arton22.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_5 {
+  background: url('../images/jpg/artoff22.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_6 {
+  background: url('../images/jpg/arton15.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem .slide_color_6 {
+  background: url('../images/jpg/artoff15.jpg') center no-repeat;
+  background-size: cover;
+}
+.webdesign .portfolio .portfolio_slide .elem_one,
+.webdesign .portfolio .portfolio_slide .elem_two,
+.webdesign .portfolio .portfolio_slide .elem_tree {
+  transform: rotatey(-20deg) skewy(-3deg);
+}
+.webdesign .portfolio .portfolio_slide .elem_four,
+.webdesign .portfolio .portfolio_slide .elem_five,
+.webdesign .portfolio .portfolio_slide .elem_six {
+  transform: rotatey(-20deg) skewy(3deg);
+}
+.webdesign .portfolio .portfolio_slide .elem_two {
+  transform-origin: right center;
+  transform: rotatey(20deg) skewy(3deg);
+}
+.webdesign .portfolio .portfolio_slide .elem_four,
+.webdesign .portfolio .portfolio_slide .elem_six {
+  transform-origin: right center;
+  transform: rotatey(20deg) skewy(-3deg);
+}
+.webdesign .portfolio .portfolio_slide:nth-child(3n-1):before {
+  transform: rotatey(180deg) skewy(10deg);
+}
+.webdesign .portfolio .portfolio_slide:nth-child(n+4):before {
+  top: 80%;
+}
+/*============RECOMPENSES================*/
+.recompenses {
+  min-height: 900px;
+}
+.recompenses .recompenses_block {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  padding-top: 80px;
+  text-align: center;
+}
+.recompenses .recompenses_block p {
+  margin-top: 200px;
+  font-size: 12rem;
+  color: #9f8764;
+}
+.recompenses .recompenses_block .nominations {
+  position: relative;
+  font-size: 3.5rem;
+}
+.recompenses .recompenses_block .nominations span {
+  padding: 0 100px;
+  letter-spacing: 15px;
+}
+.recompenses .recompenses_block .nominations img {
+  display: block;
+  position: absolute;
+  top: 15%;
+  left: 48%;
+}
+.recompenses .recompenses_block .raylights {
+  position: absolute;
+  width: 649px;
+  height: 649px;
+  top: 170px;
+  left: 260px;
+}
+/*==========================BELGIQUE=========================*/
+/*============BELGIQUE-FOTO================*/
+.belgique_foto {
+  min-height: 800px;
+  position: relative;
+  background: url('../images/jpg/belgique-main-picture.jpg');
+  background-position: 50% 0;
+}
+/*============CONTACTS================*/
+.contacts {
+  min-height: 600px;
+  position: relative;
+}
+/*============SOCIAL================*/
+.social {
+  min-height: 300px;
+  position: relative;
+  background: #3F8093;
+}
+/*============KEYFRAMES================*/
+@keyframes blink {
+  from {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes overblink {
+  from {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes heartblink {
+  from {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
